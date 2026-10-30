@@ -14,7 +14,11 @@ function addAgreementToTable(agreement) {
   row.appendChild(referenceCell);
 
   const costCell = document.createElement("td");
-  costCell.textContent = `${agreement.monthly_cost} kr`;
+  costCell.textContent = `${agreement.monthly_cost.toLocaleString("sv-SE", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })} kr`;
+
   row.appendChild(costCell);
 
   const deleteButton = document.createElement("button");
