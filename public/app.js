@@ -18,7 +18,6 @@ function addAgreementToTable(agreement) {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   })} kr`;
-
   row.appendChild(costCell);
 
   const deleteButton = document.createElement("button");
@@ -58,8 +57,6 @@ fetch("/api/agreements")
     return response.json();
   })
   .then((agreements) => {
-    console.log("Antal avtal:", agreements.length);
-
     agreements.forEach((agreement) => {
       addAgreementToTable(agreement);
     });
@@ -85,11 +82,6 @@ agreementForm.addEventListener("submit", (event) => {
     description,
   };
 
-  console.log("Avtalsnamn:", name);
-  console.log("Månadskostnad:", monthlyCost);
-  console.log("Referensnummer:", referenceNumber);
-  console.log("Beskrivning:", description);
-
   fetch("/api/agreements", {
     method: "POST",
     headers: {
@@ -105,8 +97,6 @@ agreementForm.addEventListener("submit", (event) => {
       return response.json();
     })
     .then((savedAgreement) => {
-      console.log("Sparat avtal:", savedAgreement);
-
       const agreement = {
         id: savedAgreement.id,
         name: savedAgreement.name,

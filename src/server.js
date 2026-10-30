@@ -36,8 +36,6 @@ app.delete("/api/agreements/:id", (req, res) => {
   const statement = db.prepare("DELETE FROM agreements WHERE id = ?");
   const result = statement.run(id);
 
-  console.log("Antal raderade avtal:", result.changes);
-
   if (result.changes === 0) {
     return res.status(404).json({ error: "Avtalet hittades inte" });
   }
@@ -56,8 +54,6 @@ app.post("/api/agreements", (req, res) => {
   ) {
     return res.status(400).json({ error: "Ogiltiga avtalsuppgifter" });
   }
-
-  console.log("Nytt avtal:", newAgreement);
 
   const { name, monthlyCost, referenceNumber, description } = newAgreement;
 
