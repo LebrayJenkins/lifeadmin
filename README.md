@@ -4,6 +4,10 @@ LifeAdmin is a full-stack web application developed as a school project during m
 
 The application provides a simple way to manage agreements and subscriptions, with a focus on understanding how frontend development, backend APIs, and database operations work together.
 
+## Screenshot
+
+![LifeAdmin application screenshot](screenshots/lifeadmin.png)
+
 ## Features
 
 - Add new agreements with a name, monthly cost, reference number, and description.
@@ -18,6 +22,7 @@ The application provides a simple way to manage agreements and subscriptions, wi
 ## Tech Stack
 
 **Frontend**
+
 - HTML5
 - CSS3
 - Vanilla JavaScript
@@ -25,21 +30,23 @@ The application provides a simple way to manage agreements and subscriptions, wi
 - Fetch API
 
 **Backend**
+
 - Node.js
 - Express.js
 - SQLite (built-in `node:sqlite` module)
 - REST-style API endpoints
 
 **Version Control**
+
 - Git
 - GitHub
 
 ## API Endpoints
 
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/agreements` | Retrieve all agreements |
-| POST | `/api/agreements` | Create a new agreement |
+| Method | Endpoint              | Description               |
+| ------ | --------------------- | ------------------------- |
+| GET    | `/api/agreements`     | Retrieve all agreements   |
+| POST   | `/api/agreements`     | Create a new agreement    |
 | DELETE | `/api/agreements/:id` | Delete an agreement by ID |
 
 ## Getting Started
@@ -107,7 +114,7 @@ This project gave me practical experience with:
 
 ## About This Project
 
-This application was created as part of the *JavaScript in the Browser* course at EC Utbildning.
+This application was created as part of the _JavaScript in the Browser_ course at EC Utbildning.
 
 It is a learning project built with vanilla JavaScript, Node.js, Express, and SQLite, without frontend frameworks.
 
